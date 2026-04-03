@@ -46,6 +46,7 @@
 //! | Mixedbread | `MIXEDBREAD_API_KEY` |
 //! | Nomic | `NOMIC_API_KEY` |
 //! | DeepInfra | `DEEPINFRA_API_KEY` |
+//! | OpenRouter | `OPENROUTER_API_KEY` |
 //! | Cloudflare | `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` |
 
 pub mod catalog;

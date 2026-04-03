@@ -10,7 +10,7 @@ use crate::models::{EmbedRequest, EmbedResponse, InputType};
 use crate::providers::{
     CloudflareProvider, CohereProvider, DeepInfraProvider, EmbeddingProvider, GeminiProvider,
     JinaProvider, MistralProvider, MixedbreadProvider, NomicProvider, OpenAIProvider,
-    TogetherProvider, VoyageAIProvider,
+    OpenRouterProvider, TogetherProvider, VoyageAIProvider,
 };
 
 /// Macro to register a provider from environment if API key is available.
@@ -80,6 +80,7 @@ impl Client {
     /// - `MIXEDBREAD_API_KEY` for Mixedbread
     /// - `NOMIC_API_KEY` for Nomic
     /// - `DEEPINFRA_API_KEY` for DeepInfra
+    /// - `OPENROUTER_API_KEY` for OpenRouter
     /// - `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` for Cloudflare
     pub fn new() -> Result<Self, ClientError> {
         Self::with_config(HttpConfig::default())
@@ -101,6 +102,7 @@ impl Client {
             "mixedbread" => MixedbreadProvider,
             "nomic" => NomicProvider,
             "deepinfra" => DeepInfraProvider,
+            "openrouter" => OpenRouterProvider,
         );
 
         // Cloudflare requires both API key and account ID
@@ -149,6 +151,7 @@ impl Client {
             "mixedbread" => MixedbreadProvider,
             "nomic" => NomicProvider,
             "deepinfra" => DeepInfraProvider,
+            "openrouter" => OpenRouterProvider,
         );
 
         // Cloudflare requires both API key and account ID
