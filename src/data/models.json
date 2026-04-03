@@ -653,6 +653,30 @@
   ],
   "gemini": [
     {
+      "name": "gemini-embedding-2-preview",
+      "provider": "gemini",
+      "dimensions": 3072,
+      "max_input_tokens": 8192,
+      "cost_per_million_tokens": 0.15,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "quantizations": [
+        "float"
+      ],
+      "supports_batching": true,
+      "supports_input_type": true,
+      "supports_dimensions": true,
+      "mteb_score": null,
+      "rteb_score": null,
+      "release_date": "2025-11-19",
+      "tokenizer": {
+        "engine": "tiktoken",
+        "name": "cl100k_base"
+      }
+    },
+    {
       "name": "gemini-embedding-001",
       "provider": "gemini",
       "dimensions": 3072,
@@ -677,6 +701,52 @@
     }
   ],
   "jinaai": [
+    {
+      "name": "jina-embeddings-v5-text-small",
+      "provider": "jinaai",
+      "dimensions": 1024,
+      "max_input_tokens": 32768,
+      "cost_per_million_tokens": 0.05,
+      "modalities": [
+        "text"
+      ],
+      "quantizations": [
+        "float"
+      ],
+      "supports_batching": true,
+      "supports_input_type": true,
+      "supports_dimensions": true,
+      "mteb_score": null,
+      "rteb_score": null,
+      "release_date": "2026-02-01",
+      "tokenizer": {
+        "engine": "huggingface",
+        "name": "jinaai/jina-embeddings-v5-text-small"
+      }
+    },
+    {
+      "name": "jina-embeddings-v5-text-nano",
+      "provider": "jinaai",
+      "dimensions": 768,
+      "max_input_tokens": 32768,
+      "cost_per_million_tokens": 0.05,
+      "modalities": [
+        "text"
+      ],
+      "quantizations": [
+        "float"
+      ],
+      "supports_batching": true,
+      "supports_input_type": true,
+      "supports_dimensions": true,
+      "mteb_score": null,
+      "rteb_score": null,
+      "release_date": "2026-02-01",
+      "tokenizer": {
+        "engine": "huggingface",
+        "name": "jinaai/jina-embeddings-v5-text-nano"
+      }
+    },
     {
       "name": "jina-embeddings-v4",
       "provider": "jinaai",

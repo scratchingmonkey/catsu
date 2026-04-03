@@ -190,10 +190,12 @@ impl EmbeddingProvider for GeminiProvider {
 }
 
 fn calculate_cost(model: &str, tokens: u64) -> Option<f64> {
-    // Gemini embedding pricing (as of 2024)
+    // Gemini embedding pricing
     let price_per_million = match model {
-        m if m.contains("text-embedding") => 0.00, // Free tier
-        m if m.contains("embedding-001") => 0.00,  // Free tier
+        m if m.contains("gemini-embedding-2") => 0.15,
+        m if m.contains("gemini-embedding-001") => 0.15,
+        m if m.contains("text-embedding") => 0.00, // Legacy free tier
+        m if m.contains("embedding-001") => 0.00,  // Legacy free tier
         _ => return None,
     };
 
