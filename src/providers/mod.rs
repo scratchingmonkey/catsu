@@ -9,6 +9,7 @@ pub mod mistral;
 pub mod mixedbread;
 pub mod nomic;
 pub mod openai;
+pub mod openrouter;
 pub mod together;
 pub mod voyageai;
 
@@ -26,6 +27,7 @@ pub use mistral::MistralProvider;
 pub use mixedbread::MixedbreadProvider;
 pub use nomic::NomicProvider;
 pub use openai::OpenAIProvider;
+pub use openrouter::OpenRouterProvider;
 pub use together::TogetherProvider;
 pub use voyageai::VoyageAIProvider;
 
